@@ -20,7 +20,6 @@ GOPROXY=https://goproxy.io,https://goproxy.cn,https://mirrors.aliyun.com/goproxy
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|_ finance&nbsp;&nbsp;&nbsp;&nbsp;资金工具<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|_ metadata&nbsp;&nbsp;&nbsp;&nbsp;中间件元数据<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|_ response&nbsp;&nbsp;&nbsp;&nbsp;请求响应组件<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|_ setting&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;启动设置组件<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|_ snow_flake&nbsp;&nbsp;&nbsp;&nbsp;雪花ID生成器<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|_ token&nbsp;&nbsp;&nbsp;&nbsp;jwt令牌<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|_ verify&nbsp;&nbsp;&nbsp;&nbsp;格式校验<br>
