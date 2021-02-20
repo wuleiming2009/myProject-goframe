@@ -1,0 +1,117 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "contact": {}
+    },
+    "paths": {
+        "/account/login": {
+            "post": {
+                "description": "账号登录",
+                "tags": [
+                    "account"
+                ],
+                "summary": "账号登录",
+                "parameters": [
+                    {
+                        "description": "账号登录",
+                        "name": "loginReq",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/proto.LoginReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "登录tk",
+                        "schema": {
+                            "$ref": "#/definitions/proto.LoginResp"
+                        }
+                    }
+                }
+            }
+        },
+        "/account/sign_up": {
+            "post": {
+                "description": "注册账号",
+                "tags": [
+                    "account"
+                ],
+                "summary": "注册账号",
+                "parameters": [
+                    {
+                        "description": "注册账号",
+                        "name": "signInArgs",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/proto.SignUpArgs"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "登录tk",
+                        "schema": {
+                            "$ref": "#/definitions/proto.LoginResp"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "proto.LoginReq": {
+            "type": "object",
+            "required": [
+                "email",
+                "password"
+            ],
+            "properties": {
+                "email": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                }
+            }
+        },
+        "proto.LoginResp": {
+            "type": "object",
+            "properties": {
+                "token": {
+                    "type": "string"
+                },
+                "user_id": {
+                    "type": "integer"
+                }
+            }
+        },
+        "proto.SignUpArgs": {
+            "type": "object",
+            "required": [
+                "email",
+                "password"
+            ],
+            "properties": {
+                "email": {
+                    "description": "注册邮箱",
+                    "type": "string"
+                },
+                "facebook_id": {
+                    "description": "facebook的三方账号",
+                    "type": "string"
+                },
+                "gooleplus_id": {
+                    "description": "google+的三方账号",
+                    "type": "string"
+                },
+                "password": {
+                    "description": "用户密码",
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
